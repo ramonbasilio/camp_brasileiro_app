@@ -4,8 +4,9 @@ abstract class HttpMethod {
   static const String get = 'GET';
 }
 
-abstract class EndPoints{
-  static const String tabelaBrasileirao = 'https://api.api-futebol.com.br/v1/campeonatos/10/tabela';
+abstract class EndPoints {
+  static const String tabelaBrasileirao =
+      'https://api.api-futebol.com.br/v1/campeonatos/10/tabela';
 }
 
 class HttpManager {
@@ -17,7 +18,7 @@ class HttpManager {
     final defaultHeaders = headers?.cast<String, String>() ?? {}
       ..addAll({
         'content-type': 'application/json',
-        'Authorization': 'Bearer ',
+        'Authorization': 'Bearer live_c7255c5c63297782c231b63199d6a9',
       });
 
     Dio dio = Dio();
@@ -29,9 +30,11 @@ class HttpManager {
           method: method,
         ),
       );
+      //print('Resposta da Api: ${response.data}');
       return response.data;
     } on DioError catch (error) {
-      return error.response?.data;
+      print('Resposta da Api com erro: ${error.response?.data}');
+      //return error.response?.data;
     }
   }
 }

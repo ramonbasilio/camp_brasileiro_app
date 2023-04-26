@@ -19,7 +19,7 @@ class repositorio {
   }
 
   Future<List<modeloTime>> carregaDadosEstaticos() async {
-    String jsonString = await rootBundle.loadString('tabela.json');
+    String jsonString = await rootBundle.loadString('assets/tabela.json');
     List<dynamic> json = jsonDecode(jsonString);
     List<modeloTime> listaDetimes = [];
     for (var time in json) {
