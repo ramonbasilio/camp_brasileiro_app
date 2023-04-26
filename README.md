@@ -1,6 +1,6 @@
 # App_Brasileirão_2023
 
-Projeto pessoal - Desenvolvimento de Aplicativo para acompanhamento do Brasileirão 2023
+Projeto pessoal - Desenvolvimento de Aplicativo para acompanhamento dos jogos e times do Brasileirão 2023
 
 ## Motivação do projeto
 
