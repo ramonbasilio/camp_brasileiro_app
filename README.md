@@ -1,4 +1,4 @@
-# camp_brasileiro_app
+# App_Brasileirão_2023
 
 Projeto pessoal - Desenvolvimento de Aplicativo para acompanhamento do Brasileirão 2023
 
