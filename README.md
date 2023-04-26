@@ -10,9 +10,9 @@ Colocar em prática os conteúdos aprendidos nos últimos meses, unindo um proje
 ### Caso queira instalar o projeto em seu computador e posteriormente em seu smartphone, segue orientações de como o fazer.
 
 Esse projeto foi (e está) sendo desenvolvido em Flutter, portanto precisa o Flutter precisa estar devidamente instalado em seu computador. Segue link com passo a passo de como instalar, direto do site oficial.
-```diff
+
 https://docs.flutter.dev/get-started/install
-```
+
 
 Após essa etapa, faço o clone do projeto, em um diretório de sua preferência.
 ```diff
@@ -32,9 +32,8 @@ flutter pub get
 
 Antes de seguir com a excução do aplicativo, você precisa de uma KEY da API para ter acesso aos dados do campeonato. Para tal, entre no link abaixo e faço seu cadastro. 
 
-```diff
 https://api-futebol.com.br/
-```
+
 
 De posse da KEY, procure o seguinte arquivo:
 #### lib/controlador_api.dart
