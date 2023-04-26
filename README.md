@@ -6,6 +6,7 @@ Projeto pessoal - Desenvolvimento de Aplicativo para acompanhamento dos jogos e 
 
 Colocar em prática os conteúdos aprendidos nos últimos meses, unindo um projeto para o portifólio técnico e um gosto pessoal que é o Futebol.
 
+![WhatsApp Image 2023-04-26 at 07 53 32](https://user-images.githubusercontent.com/37743546/234572103-fdd4ef6a-655e-400d-8181-85607ccccfcf.jpeg)
 
 ### Caso queira instalar o projeto em seu computador e posteriormente em seu smartphone, segue orientações de como o fazer.
 
