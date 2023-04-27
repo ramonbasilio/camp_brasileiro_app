@@ -18,7 +18,7 @@ class HttpManager {
     final defaultHeaders = headers?.cast<String, String>() ?? {}
       ..addAll({
         'content-type': 'application/json',
-        'Authorization': 'Bearer #######################################',
+        'Authorization': 'Bearer live_c7255c5c63297782c231b63199d6a9',
       });
 
     Dio dio = Dio();
@@ -33,7 +33,7 @@ class HttpManager {
       //print('Resposta da Api: ${response.data}');
       return response.data;
     } on DioError catch (error) {
-      print('Resposta da Api com erro: ${error.response?.data}');
+      return('Resposta da Api com erro: ${error.response?.data}');
       //return error.response?.data;
     }
   }
