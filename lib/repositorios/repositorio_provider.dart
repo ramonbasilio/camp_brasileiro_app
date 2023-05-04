@@ -20,7 +20,7 @@ class repositorioProvider extends ChangeNotifier {
   Future<List<modeloRodada>?> todasRodadas() async {
     HttpManager httpManager = HttpManager();
     final List<Future<dynamic>> _listaEndPoints = [];
-    for (int i = 1; i <= 12; i++) {
+    for (int i = 1; i <= 20; i++) {
       _listaEndPoints.add(httpManager.restRequest(
           url: 'https://api.api-futebol.com.br/v1/campeonatos/10/rodadas/${i}',
           method: HttpMethod.get));

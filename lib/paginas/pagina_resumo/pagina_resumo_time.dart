@@ -1,9 +1,8 @@
 // ignore_for_file: must_be_immutable
-import 'package:camp_brasileiro_app/modelos/rodada_modelo_completa.dart';
 import 'package:camp_brasileiro_app/modelos/rodada_modelo_time.dart';
+import 'package:camp_brasileiro_app/paginas/agenda/pagina_agenda.dart';
 import 'package:camp_brasileiro_app/paginas/pagina_tabela/widget/widget/ultimos_jogos.dart';
 import 'package:camp_brasileiro_app/modelos/tabela_modelo.dart';
-import 'package:camp_brasileiro_app/repositorios/repositorio.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -105,34 +104,7 @@ class _PaginaResumoTimeState extends State<PaginaResumoTime> {
                       child: Text('SALDO DE GOLS'),
                     ),
                   ),
-                  const ListTile(
-                    title: Center(
-                      child: Text(
-                        '5',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    subtitle: Center(
-                      child: Text('CARTÕES AMARELOS'),
-                    ),
-                  ),
-                  const ListTile(
-                    title: Center(
-                      child: Text(
-                        '1',
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    subtitle: Center(
-                      child: Text('CARTÕES VERMELHO'),
-                    ),
-                  ),
+
                   ListTile(
                     title: Center(
                       child: Text(
@@ -157,36 +129,22 @@ class _PaginaResumoTimeState extends State<PaginaResumoTime> {
                       child: Text('ÚLTIMOS JOGOS'),
                     ),
                   ),
-                  ListView.separated(
-                    separatorBuilder: (context, index) {
-                      return const Divider(
-                        thickness: 1,
-                      );
-                    },
-                    scrollDirection: Axis.vertical,
-                    shrinkWrap: true,
-                    itemCount: widget.rodadasTime.length,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
-                          child: ListTile(
-                            leading:
-                                Text('${widget.rodadasTime[index].rodada}'),
-                            title: Center(
-                                child: Text(
-                                    '${widget.rodadasTime[index].partidas['placar']}')),
-                            subtitle: Center(
-                              child: Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: widget.rodadasTime[index].partidas['data_realizacao'] != null ? Text(
-                                    '${widget.rodadasTime[index].partidas['data_realizacao']} '
-                                    '${widget.rodadasTime[index].partidas['hora_realizacao']} '
-                                    '${widget.rodadasTime[index].partidas['estadio']['nome_popular']}'
-                              ) :const Text('Jogo agendado'),
-                            ),
-                      )));
-                    },
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PaginaAgenda(
+                                rodadasTime: widget.rodadasTime,
+                              ),
+                            ));
+                      },
+                      child: Text('Agenda do time'),
+                    ),
                   ),
+              
                 ],
               ),
             )

@@ -30,27 +30,19 @@ class SplashScreen extends StatelessWidget {
                 resumoTabela != null &&
                 resumoRodada.isNotEmpty &&
                 resumoTabela.isNotEmpty) {
-              Future.delayed(const Duration(seconds: 2)).then((_) {
+              Future.delayed(const Duration(seconds: 1)).then((_) {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                     builder: (context) => const PaginaTabela2()));
               });
             }
             return Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child:  Center(child:Text('Dados Carregados com sucesso!')),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Center(child: resumoRodada!.isNotEmpty ? const Text('Rodada carregada') : null ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Center(child: resumoTabela!.isNotEmpty ? const Text('Tabela carregada') : null ),
-              )
-            ]);
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Center(child: Text('Dados Carregados com sucesso!')),
+                  ),
+                ]);
           }
         },
       ),

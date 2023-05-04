@@ -1,6 +1,5 @@
 // ignore_for_file: avoid_print, unused_field, prefer_final_fields, prefer_const_constructors
 
-import 'package:camp_brasileiro_app/repositorios/repositorio.dart';
 import 'package:camp_brasileiro_app/repositorios/repositorio_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
