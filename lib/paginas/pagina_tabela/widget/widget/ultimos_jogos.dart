@@ -1,6 +1,6 @@
 // ignore_for_file: must_be_immutable, unused_local_variable
 
-import 'package:camp_brasileiro_app/tabela_modelo.dart';
+import 'package:camp_brasileiro_app/modelos/tabela_modelo.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 

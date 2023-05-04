@@ -1,4 +1,4 @@
-import 'package:camp_brasileiro_app/style.dart';
+import 'package:camp_brasileiro_app/formatacao/style.dart';
 import 'package:flutter/material.dart';
 
 class CabecalhoTabela extends StatelessWidget {

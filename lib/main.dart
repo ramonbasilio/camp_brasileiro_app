@@ -1,9 +1,19 @@
 // ignore_for_file: avoid_print, unused_field, prefer_final_fields, prefer_const_constructors
-import 'package:camp_brasileiro_app/Paginas/pagina_tabela.dart';
+
+import 'package:camp_brasileiro_app/repositorios/repositorio.dart';
+import 'package:camp_brasileiro_app/repositorios/repositorio_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'paginas/splash/pagina_splash.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => repositorioProvider()),
+    ],
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,12 +23,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner : false,
+      debugShowCheckedModeBanner: false,
       title: 'Brasileirão App - 2023',
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: const PaginaTabela(),
+      home: const SplashScreen(),
     );
   }
 }

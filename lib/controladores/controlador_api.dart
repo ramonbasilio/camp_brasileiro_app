@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 
 abstract class HttpMethod {
   static const String get = 'GET';
@@ -13,13 +14,11 @@ class HttpManager {
   Future<dynamic> restRequest({
     required String url,
     required String method,
-    Map? headers,
   }) async {
-    final defaultHeaders = headers?.cast<String, String>() ?? {}
-      ..addAll({
-        'content-type': 'application/json',
-        'Authorization': 'Bearer live_c7255c5c63297782c231b63199d6a9',
-      });
+    Map<String, dynamic> defaultHeaders = ({
+      'content-type': 'application/json',
+      'Authorization': 'Bearer live_c7255c5c63297782c231b63199d6a9',
+    });
 
     Dio dio = Dio();
     try {
@@ -30,10 +29,14 @@ class HttpManager {
           method: method,
         ),
       );
+      if (response.statusCode == 200) {
+        return response.data;
+      } else {
+        ErrorWidget('Erro ao buscar dados');
+      }
       //print('Resposta da Api: ${response.data}');
-      return response.data;
     } on DioError catch (error) {
-      return('Resposta da Api com erro: ${error.response?.data}');
+      return ErrorWidget('Erro ao buscar dados: ${error.response?.data}');
       //return error.response?.data;
     }
   }

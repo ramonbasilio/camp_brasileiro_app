@@ -1,15 +1,22 @@
 // ignore_for_file: must_be_immutable
-
-import 'package:camp_brasileiro_app/Paginas/widget/ultimos_jogos.dart';
-import 'package:camp_brasileiro_app/tabela_modelo.dart';
+import 'package:camp_brasileiro_app/modelos/rodada_modelo_completa.dart';
+import 'package:camp_brasileiro_app/modelos/rodada_modelo_time.dart';
+import 'package:camp_brasileiro_app/paginas/pagina_tabela/widget/widget/ultimos_jogos.dart';
+import 'package:camp_brasileiro_app/modelos/tabela_modelo.dart';
+import 'package:camp_brasileiro_app/repositorios/repositorio.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
 class PaginaResumoTime extends StatefulWidget {
-  List<modeloTime> times;
+  List<modeloRodadaTime> rodadasTime;
+  List<modeloTime> tabelaCompleta;
   int index;
-  PaginaResumoTime({super.key, required this.times, required this.index});
+  PaginaResumoTime(
+      {super.key,
+      required this.tabelaCompleta,
+      required this.index,
+      required this.rodadasTime});
 
   @override
   State<PaginaResumoTime> createState() => _PaginaResumoTimeState();
@@ -20,7 +27,8 @@ class _PaginaResumoTimeState extends State<PaginaResumoTime> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('${widget.times[widget.index].time['nome_popular']}'),
+        title:
+            Text('${widget.tabelaCompleta[widget.index].time['nome_popular']}'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -34,7 +42,7 @@ class _PaginaResumoTimeState extends State<PaginaResumoTime> {
                   width: 150,
                   child: Image(
                     image: AssetImage(
-                        'assets/escudos/${widget.times[widget.index].time['time_id']}.png'),
+                        'assets/escudos/${widget.tabelaCompleta[widget.index].time['time_id']}.png'),
                   ),
                 ),
               ),
@@ -56,7 +64,7 @@ class _PaginaResumoTimeState extends State<PaginaResumoTime> {
                   ListTile(
                     title: Center(
                       child: Text(
-                        widget.times[widget.index].gols_pro.toString(),
+                        widget.tabelaCompleta[widget.index].gols_pro.toString(),
                         style: const TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
@@ -65,12 +73,13 @@ class _PaginaResumoTimeState extends State<PaginaResumoTime> {
                     ),
                     subtitle: Center(
                         child: Text(
-                            'GOLS FEITOS  - Média de ${(widget.times[widget.index].gols_pro / widget.times[widget.index].jogos).toPrecision(2)} gol(s) por partida')),
+                            'GOLS FEITOS  - Média de ${(widget.tabelaCompleta[widget.index].gols_pro / widget.tabelaCompleta[widget.index].jogos).toPrecision(2)} gol(s) por partida')),
                   ),
                   ListTile(
                     title: Center(
                       child: Text(
-                        widget.times[widget.index].gols_contra.toString(),
+                        widget.tabelaCompleta[widget.index].gols_contra
+                            .toString(),
                         style: const TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
@@ -79,12 +88,13 @@ class _PaginaResumoTimeState extends State<PaginaResumoTime> {
                     ),
                     subtitle: Center(
                         child: Text(
-                            'GOLS SOFRIDOS - Média de ${(widget.times[widget.index].gols_contra / widget.times[widget.index].jogos).toPrecision(2)} gol(s) sofridos por partida')),
+                            'GOLS SOFRIDOS - Média de ${(widget.tabelaCompleta[widget.index].gols_contra / widget.tabelaCompleta[widget.index].jogos).toPrecision(2)} gol(s) sofridos por partida')),
                   ),
                   ListTile(
                     title: Center(
                       child: Text(
-                        widget.times[widget.index].saldo_gols.toString(),
+                        widget.tabelaCompleta[widget.index].saldo_gols
+                            .toString(),
                         style: const TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
@@ -126,7 +136,7 @@ class _PaginaResumoTimeState extends State<PaginaResumoTime> {
                   ListTile(
                     title: Center(
                       child: Text(
-                        '${widget.times[widget.index].aproveitamento.toString()} %',
+                        '${widget.tabelaCompleta[widget.index].aproveitamento.toString()} %',
                         style: const TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
@@ -141,11 +151,41 @@ class _PaginaResumoTimeState extends State<PaginaResumoTime> {
                     title: Center(
                         child: UltimosJogos(
                       index: widget.index,
-                      times: widget.times,
+                      times: widget.tabelaCompleta,
                     )),
                     subtitle: const Center(
                       child: Text('ÚLTIMOS JOGOS'),
                     ),
+                  ),
+                  ListView.separated(
+                    separatorBuilder: (context, index) {
+                      return const Divider(
+                        thickness: 1,
+                      );
+                    },
+                    scrollDirection: Axis.vertical,
+                    shrinkWrap: true,
+                    itemCount: widget.rodadasTime.length,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                          padding: const EdgeInsets.only(bottom: 10),
+                          child: ListTile(
+                            leading:
+                                Text('${widget.rodadasTime[index].rodada}'),
+                            title: Center(
+                                child: Text(
+                                    '${widget.rodadasTime[index].partidas['placar']}')),
+                            subtitle: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: widget.rodadasTime[index].partidas['data_realizacao'] != null ? Text(
+                                    '${widget.rodadasTime[index].partidas['data_realizacao']} '
+                                    '${widget.rodadasTime[index].partidas['hora_realizacao']} '
+                                    '${widget.rodadasTime[index].partidas['estadio']['nome_popular']}'
+                              ) :const Text('Jogo agendado'),
+                            ),
+                      )));
+                    },
                   ),
                 ],
               ),
