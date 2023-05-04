@@ -17,7 +17,7 @@ class HttpManager {
   }) async {
     Map<String, dynamic> defaultHeaders = ({
       'content-type': 'application/json',
-      'Authorization': 'Bearer live_c7255c5c63297782c231b63199d6a9',
+      'Authorization': 'Bearer #############################################',
     });
 
     Dio dio = Dio();
