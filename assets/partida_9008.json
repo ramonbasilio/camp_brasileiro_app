@@ -1,0 +1,888 @@
+{
+    "partida_id": 9008,
+    "campeonato": {
+        "campeonato_id": 10,
+        "nome": "Campeonato Brasileiro",
+        "slug": "campeonato-brasileiro",
+        "nome_popular": "Brasileirão",
+        "fase_atual": {
+            "fase_id": 317,
+            "nome": "Fase Única",
+            "slug": "fase-unica",
+            "tipo": "pontos-corridos",
+            "_link": "/v1/campeonatos/10/fases/317"
+        },
+        "rodada_atual": {
+            "nome": "5ª Rodada",
+            "slug": "5a-rodada",
+            "rodada": 5,
+            "status": "agendada"
+        },
+        "edicao": {
+            "edicao_id": 70,
+            "temporada": "2023",
+            "nome": "Campeonato Brasileiro 2023",
+            "nome_popular": "Brasileirão 2023",
+            "slug": "campeonato-brasileiro-2023"
+        }
+    },
+    "placar": "Fluminense 2x0 Athletico-PR",
+    "time_mandante": {
+        "time_id": 26,
+        "nome_popular": "Fluminense",
+        "sigla": "FLU",
+        "escudo": "https://cdn.api-futebol.com.br/escudos/638d3492a6e0b.svg"
+    },
+    "time_visitante": {
+        "time_id": 185,
+        "nome_popular": "Athletico-PR",
+        "sigla": "CAP",
+        "escudo": "https://cdn.api-futebol.com.br/escudos/638d34e1b8948.svg"
+    },
+    "placar_mandante": 2,
+    "placar_visitante": 0,
+    "disputa_penalti": false,
+    "status": "finalizado",
+    "slug": "fluminense-athletico-pr-9008",
+    "data_realizacao": "22/04/2023",
+    "hora_realizacao": "16:00",
+    "data_realizacao_iso": "2023-04-22T16:00:00-0300",
+    "estadio": {
+        "estadio_id": 19,
+        "nome_popular": "Maracanã"
+    },
+    "grupo": null,
+    "rodada": "2ª Rodada",
+    "fase": {
+        "fase_id": 317,
+        "nome": "Fase Única",
+        "slug": "fase-unica",
+        "tipo": "pontos-corridos",
+        "_link": "/v1/campeonatos/10/fases/317"
+    },
+    "estatisticas": {
+        "mandante": {
+            "posse_de_bola": "59%",
+            "escanteios": 10,
+            "impedimentos": 3,
+            "faltas": 13,
+            "passes": {
+                "total": 585,
+                "completos": 513,
+                "errados": 72,
+                "precisao": "88%"
+            },
+            "finalizacao": {
+                "total": 10,
+                "no_gol": 5,
+                "pra_fora": 6,
+                "na_trave": 1,
+                "bloqueado": 1,
+                "precisao": "50%"
+            },
+            "defensivo": {
+                "defesas": 8
+            },
+            "desarmes": 12
+        },
+        "visitante": {
+            "posse_de_bola": "41%",
+            "escanteios": 10,
+            "impedimentos": 1,
+            "faltas": 20,
+            "passes": {
+                "total": 336,
+                "completos": 275,
+                "errados": 72,
+                "precisao": "82%"
+            },
+            "finalizacao": {
+                "total": 4,
+                "no_gol": 2,
+                "pra_fora": 7,
+                "na_trave": 0,
+                "bloqueado": 3,
+                "precisao": "50%"
+            },
+            "defensivo": {
+                "defesas": 6
+            },
+            "desarmes": 20
+        }
+    },
+    "escalacoes": {
+        "mandante": {
+            "esquema_tatico": "4-3-3",
+            "tecnico": {
+                "tecnico_id": 101,
+                "nome_popular": "Fernando Diniz"
+            },
+            "titulares": [
+                {
+                    "atleta": {
+                        "atleta_id": 1117,
+                        "nome_popular": "Fábio"
+                    },
+                    "camisa": "1",
+                    "ordem": 0,
+                    "posicao": {
+                        "nome": "Goleiro",
+                        "sigla": "GOL"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 3198,
+                        "nome_popular": "Samuel Xavier"
+                    },
+                    "camisa": "2",
+                    "ordem": 1,
+                    "posicao": {
+                        "nome": "Lateral Direito",
+                        "sigla": "LAD"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 978,
+                        "nome_popular": "Nino"
+                    },
+                    "camisa": "33",
+                    "ordem": 2,
+                    "posicao": {
+                        "nome": "Zagueiro Direito",
+                        "sigla": "ZAD"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 2053,
+                        "nome_popular": "Felipe Melo"
+                    },
+                    "camisa": "30",
+                    "ordem": 3,
+                    "posicao": {
+                        "nome": "Zagueiro Esquerdo",
+                        "sigla": "ZAE"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 13024,
+                        "nome_popular": "Alexsander"
+                    },
+                    "camisa": "5",
+                    "ordem": 4,
+                    "posicao": {
+                        "nome": "Lateral Esquerda",
+                        "sigla": "LAE"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 4361,
+                        "nome_popular": "André"
+                    },
+                    "camisa": "7",
+                    "ordem": 5,
+                    "posicao": {
+                        "nome": "Volante",
+                        "sigla": "VOL"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 3217,
+                        "nome_popular": "Lima"
+                    },
+                    "camisa": "45",
+                    "ordem": 6,
+                    "posicao": {
+                        "nome": "Volante",
+                        "sigla": "VOL"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 928,
+                        "nome_popular": "Ganso"
+                    },
+                    "camisa": "10",
+                    "ordem": 7,
+                    "posicao": []
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 4159,
+                        "nome_popular": "Arias"
+                    },
+                    "camisa": "21",
+                    "ordem": 8,
+                    "posicao": {
+                        "nome": "Atacante",
+                        "sigla": "ATA"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 733,
+                        "nome_popular": "Cano"
+                    },
+                    "camisa": "14",
+                    "ordem": 9,
+                    "posicao": {
+                        "nome": "Atacante",
+                        "sigla": "ATA"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 4495,
+                        "nome_popular": "Keno"
+                    },
+                    "camisa": "11",
+                    "ordem": 10,
+                    "posicao": {
+                        "nome": "Atacante",
+                        "sigla": "ATA"
+                    }
+                }
+            ],
+            "reservas": [
+                {
+                    "atleta": {
+                        "atleta_id": 5534,
+                        "nome_popular": "Pedro Rangel"
+                    },
+                    "camisa": "22",
+                    "ordem": 0,
+                    "posicao": {
+                        "nome": "Goleiro",
+                        "sigla": "GOL"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 1335,
+                        "nome_popular": "Guga"
+                    },
+                    "camisa": "23",
+                    "ordem": 1,
+                    "posicao": {
+                        "nome": "Lateral Direito",
+                        "sigla": "LAD"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 2437,
+                        "nome_popular": "Vitor Mendes"
+                    },
+                    "camisa": "4",
+                    "ordem": 2,
+                    "posicao": {
+                        "nome": "Zagueiro Direito",
+                        "sigla": "ZAD"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 4668,
+                        "nome_popular": "Manoel"
+                    },
+                    "camisa": "26",
+                    "ordem": 3,
+                    "posicao": {
+                        "nome": "Zagueiro Direito",
+                        "sigla": "ZAD"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 1795,
+                        "nome_popular": "David Braz"
+                    },
+                    "camisa": "44",
+                    "ordem": 4,
+                    "posicao": {
+                        "nome": "Zagueiro Direito",
+                        "sigla": "ZAD"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 7560,
+                        "nome_popular": "Thiago Santos"
+                    },
+                    "camisa": "29",
+                    "ordem": 5,
+                    "posicao": {
+                        "nome": "Volante",
+                        "sigla": "VOL"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 5429,
+                        "nome_popular": "Gabriel Pirani"
+                    },
+                    "camisa": "20",
+                    "ordem": 6,
+                    "posicao": []
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 14445,
+                        "nome_popular": "Isaac"
+                    },
+                    "camisa": "32",
+                    "ordem": 7,
+                    "posicao": []
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 14224,
+                        "nome_popular": "Giovanni Manson"
+                    },
+                    "camisa": "37",
+                    "ordem": 8,
+                    "posicao": []
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 5675,
+                        "nome_popular": "John Kennedy"
+                    },
+                    "camisa": "9",
+                    "ordem": 9,
+                    "posicao": {
+                        "nome": "Atacante",
+                        "sigla": "ATA"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 13355,
+                        "nome_popular": "Alan"
+                    },
+                    "camisa": "18",
+                    "ordem": 10,
+                    "posicao": {
+                        "nome": "Atacante",
+                        "sigla": "ATA"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 10452,
+                        "nome_popular": "Lelê"
+                    },
+                    "camisa": "99",
+                    "ordem": 11,
+                    "posicao": {
+                        "nome": "Atacante",
+                        "sigla": "ATA"
+                    }
+                }
+            ]
+        },
+        "visitante": {
+            "esquema_tatico": "4-3-3",
+            "tecnico": {
+                "tecnico_id": 2577,
+                "nome_popular": "Paulo Turra"
+            },
+            "titulares": [
+                {
+                    "atleta": {
+                        "atleta_id": 4034,
+                        "nome_popular": "Bento"
+                    },
+                    "camisa": "1",
+                    "ordem": 0,
+                    "posicao": {
+                        "nome": "Goleiro",
+                        "sigla": "GOL"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 2381,
+                        "nome_popular": "Madson"
+                    },
+                    "camisa": "22",
+                    "ordem": 1,
+                    "posicao": {
+                        "nome": "Lateral Direito",
+                        "sigla": "LAD"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 2284,
+                        "nome_popular": "Pedro Henrique"
+                    },
+                    "camisa": "34",
+                    "ordem": 2,
+                    "posicao": {
+                        "nome": "Zagueiro Direito",
+                        "sigla": "ZAD"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 3998,
+                        "nome_popular": "Thiago Heleno"
+                    },
+                    "camisa": "44",
+                    "ordem": 3,
+                    "posicao": {
+                        "nome": "Zagueiro Esquerdo",
+                        "sigla": "ZAE"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 5704,
+                        "nome_popular": "Pedrinho"
+                    },
+                    "camisa": "48",
+                    "ordem": 4,
+                    "posicao": {
+                        "nome": "Lateral Esquerda",
+                        "sigla": "LAE"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 9701,
+                        "nome_popular": "Fernandinho"
+                    },
+                    "camisa": "5",
+                    "ordem": 5,
+                    "posicao": {
+                        "nome": "Volante",
+                        "sigla": "VOL"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 4019,
+                        "nome_popular": "Erick"
+                    },
+                    "camisa": "26",
+                    "ordem": 6,
+                    "posicao": {
+                        "nome": "Volante",
+                        "sigla": "VOL"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 4004,
+                        "nome_popular": "Léo Cittadini"
+                    },
+                    "camisa": "18",
+                    "ordem": 7,
+                    "posicao": {
+                        "nome": "Volante",
+                        "sigla": "VOL"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 5158,
+                        "nome_popular": "Cuello"
+                    },
+                    "camisa": "28",
+                    "ordem": 8,
+                    "posicao": {
+                        "nome": "Atacante",
+                        "sigla": "ATA"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 2107,
+                        "nome_popular": "Pablo"
+                    },
+                    "camisa": "92",
+                    "ordem": 9,
+                    "posicao": {
+                        "nome": "Atacante",
+                        "sigla": "ATA"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 5659,
+                        "nome_popular": "Thiago Andrade"
+                    },
+                    "camisa": "19",
+                    "ordem": 10,
+                    "posicao": {
+                        "nome": "Atacante",
+                        "sigla": "ATA"
+                    }
+                }
+            ],
+            "reservas": [
+                {
+                    "atleta": {
+                        "atleta_id": 5469,
+                        "nome_popular": "Léo Linck"
+                    },
+                    "camisa": "23",
+                    "ordem": 0,
+                    "posicao": {
+                        "nome": "Goleiro",
+                        "sigla": "GOL"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 4562,
+                        "nome_popular": "Khellven "
+                    },
+                    "camisa": "2",
+                    "ordem": 1,
+                    "posicao": {
+                        "nome": "Lateral Direito",
+                        "sigla": "LAD"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 4016,
+                        "nome_popular": "Zé Ivaldo"
+                    },
+                    "camisa": "3",
+                    "ordem": 2,
+                    "posicao": {
+                        "nome": "Zagueiro Direito",
+                        "sigla": "ZAD"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 5757,
+                        "nome_popular": "Matheus Piauí"
+                    },
+                    "camisa": "42",
+                    "ordem": 3,
+                    "posicao": {
+                        "nome": "Zagueiro Direito",
+                        "sigla": "ZAD"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 1710,
+                        "nome_popular": "Fernando"
+                    },
+                    "camisa": "6",
+                    "ordem": 4,
+                    "posicao": {
+                        "nome": "Lateral Esquerda",
+                        "sigla": "LAE"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 623,
+                        "nome_popular": "Hugo Moura"
+                    },
+                    "camisa": "17",
+                    "ordem": 5,
+                    "posicao": {
+                        "nome": "Volante",
+                        "sigla": "VOL"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 4032,
+                        "nome_popular": "Christian"
+                    },
+                    "camisa": "88",
+                    "ordem": 6,
+                    "posicao": {
+                        "nome": "Volante",
+                        "sigla": "VOL"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 2122,
+                        "nome_popular": "Vitor Bueno"
+                    },
+                    "camisa": "8",
+                    "ordem": 7,
+                    "posicao": []
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 4028,
+                        "nome_popular": "Terans"
+                    },
+                    "camisa": "10",
+                    "ordem": 8,
+                    "posicao": []
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 9969,
+                        "nome_popular": "Vitor Roque"
+                    },
+                    "camisa": "9",
+                    "ordem": 9,
+                    "posicao": {
+                        "nome": "Atacante",
+                        "sigla": "ATA"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 8067,
+                        "nome_popular": "Canobbio"
+                    },
+                    "camisa": "14",
+                    "ordem": 10,
+                    "posicao": {
+                        "nome": "Atacante",
+                        "sigla": "ATA"
+                    }
+                },
+                {
+                    "atleta": {
+                        "atleta_id": 10108,
+                        "nome_popular": "Rômulo"
+                    },
+                    "camisa": "35",
+                    "ordem": 11,
+                    "posicao": {
+                        "nome": "Atacante",
+                        "sigla": "ATA"
+                    }
+                }
+            ]
+        }
+    },
+    "gols": {
+        "mandante": [
+            {
+                "atleta": {
+                    "atleta_id": 3217,
+                    "nome_popular": "Lima"
+                },
+                "minuto": "10:33",
+                "periodo": "1º tempo",
+                "penalti": false,
+                "gol_contra": false
+            },
+            {
+                "atleta": {
+                    "atleta_id": 978,
+                    "nome_popular": "Nino"
+                },
+                "minuto": "21:55",
+                "periodo": "2º tempo",
+                "penalti": false,
+                "gol_contra": false
+            }
+        ],
+        "visitante": []
+    },
+    "substituicoes": {
+        "mandante": [
+            {
+                "saiu": {
+                    "atleta_id": 2053,
+                    "nome_popular": "Felipe Melo"
+                },
+                "entrou": {
+                    "atleta_id": 2437,
+                    "nome_popular": "Vitor Mendes"
+                },
+                "periodo": "2º tempo",
+                "minuto": "26:30"
+            },
+            {
+                "saiu": {
+                    "atleta_id": 3217,
+                    "nome_popular": "Lima"
+                },
+                "entrou": {
+                    "atleta_id": 7560,
+                    "nome_popular": "Thiago Santos"
+                },
+                "periodo": "2º tempo",
+                "minuto": "26:42"
+            },
+            {
+                "saiu": {
+                    "atleta_id": 4495,
+                    "nome_popular": "Keno"
+                },
+                "entrou": {
+                    "atleta_id": 10452,
+                    "nome_popular": "Lelê"
+                },
+                "periodo": "2º tempo",
+                "minuto": "33:37"
+            },
+            {
+                "saiu": {
+                    "atleta_id": 928,
+                    "nome_popular": "Ganso"
+                },
+                "entrou": {
+                    "atleta_id": 5429,
+                    "nome_popular": "Gabriel Pirani"
+                },
+                "periodo": "2º tempo",
+                "minuto": "33:48"
+            },
+            {
+                "saiu": {
+                    "atleta_id": 733,
+                    "nome_popular": "Cano"
+                },
+                "entrou": {
+                    "atleta_id": 5675,
+                    "nome_popular": "John Kennedy"
+                },
+                "periodo": "2º tempo",
+                "minuto": "41:34"
+            }
+        ],
+        "visitante": [
+            {
+                "saiu": {
+                    "atleta_id": 4004,
+                    "nome_popular": "Léo Cittadini"
+                },
+                "entrou": {
+                    "atleta_id": 623,
+                    "nome_popular": "Hugo Moura"
+                },
+                "periodo": "1º tempo",
+                "minuto": "23:44"
+            },
+            {
+                "saiu": {
+                    "atleta_id": 5659,
+                    "nome_popular": "Thiago Andrade"
+                },
+                "entrou": {
+                    "atleta_id": 10108,
+                    "nome_popular": "Rômulo"
+                },
+                "periodo": "intervalo",
+                "minuto": null
+            },
+            {
+                "saiu": {
+                    "atleta_id": 9701,
+                    "nome_popular": "Fernandinho"
+                },
+                "entrou": {
+                    "atleta_id": 2122,
+                    "nome_popular": "Vitor Bueno"
+                },
+                "periodo": "intervalo",
+                "minuto": null
+            },
+            {
+                "saiu": {
+                    "atleta_id": 4019,
+                    "nome_popular": "Erick"
+                },
+                "entrou": {
+                    "atleta_id": 4032,
+                    "nome_popular": "Christian"
+                },
+                "periodo": "2º tempo",
+                "minuto": "17:45"
+            },
+            {
+                "saiu": {
+                    "atleta_id": 5158,
+                    "nome_popular": "Cuello"
+                },
+                "entrou": {
+                    "atleta_id": 9969,
+                    "nome_popular": "Vitor Roque"
+                },
+                "periodo": "2º tempo",
+                "minuto": "19:53"
+            }
+        ]
+    },
+    "cartoes": {
+        "amarelo": {
+            "mandante": [
+                {
+                    "cartao_id": 30057,
+                    "atleta": {
+                        "atleta_id": 3198,
+                        "nome_popular": "Samuel Xavier"
+                    },
+                    "minuto": "47:28",
+                    "periodo": "1º tempo"
+                },
+                {
+                    "cartao_id": 30077,
+                    "atleta": {
+                        "atleta_id": 4495,
+                        "nome_popular": "Keno"
+                    },
+                    "minuto": "35:26",
+                    "periodo": "2º tempo"
+                },
+                {
+                    "cartao_id": 30082,
+                    "atleta": {
+                        "atleta_id": 7560,
+                        "nome_popular": "Thiago Santos"
+                    },
+                    "minuto": "49:04",
+                    "periodo": "2º tempo"
+                }
+            ],
+            "visitante": [
+                {
+                    "cartao_id": 30054,
+                    "atleta": {
+                        "atleta_id": 2107,
+                        "nome_popular": "Pablo"
+                    },
+                    "minuto": "18:23",
+                    "periodo": "1º tempo"
+                },
+                {
+                    "cartao_id": 30060,
+                    "atleta": {
+                        "atleta_id": 4019,
+                        "nome_popular": "Erick"
+                    },
+                    "minuto": "05:46",
+                    "periodo": "2º tempo"
+                },
+                {
+                    "cartao_id": 30070,
+                    "atleta": {
+                        "atleta_id": 5704,
+                        "nome_popular": "Pedrinho"
+                    },
+                    "minuto": "15:11",
+                    "periodo": "2º tempo"
+                }
+            ]
+        },
+        "vermelho": {
+            "mandante": [],
+            "visitante": []
+        }
+    }
+}

@@ -1,5 +1,5 @@
-import 'package:camp_brasileiro_app/modelos/rodada_modelo_completa.dart';
-import 'package:camp_brasileiro_app/modelos/tabela_modelo.dart';
+import 'package:camp_brasileiro_app/modelos/modelo_rodada_completa.dart';
+import 'package:camp_brasileiro_app/modelos/modelo_tabela.dart';
 import 'package:camp_brasileiro_app/paginas/pagina_tabela/pagina_tabela.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -22,7 +22,7 @@ class SplashScreen extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
-            return const Center(child: Text('Erro ao buscar dados!'));
+            return  Center(child: Text('Erro ao buscar dados! ${snapshot.error}'));
           } else {
             List<modeloRodada>? resumoRodada = snapshot.data?[0];
             List<modeloTime>? resumoTabela = snapshot.data?[1];
@@ -32,7 +32,7 @@ class SplashScreen extends StatelessWidget {
                 resumoTabela.isNotEmpty) {
               Future.delayed(const Duration(seconds: 1)).then((_) {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (context) => const PaginaTabela2()));
+                    builder: (context) => const PaginaTabela()));
               });
             }
             return Column(

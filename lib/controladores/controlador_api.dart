@@ -17,7 +17,7 @@ class HttpManager {
   }) async {
     Map<String, dynamic> defaultHeaders = ({
       'content-type': 'application/json',
-      'Authorization': 'Bearer #############################################',
+      'Authorization': 'Bearer live_c7255c5c63297782c231b63199d6a9',
     });
 
     Dio dio = Dio();
@@ -32,10 +32,12 @@ class HttpManager {
       if (response.statusCode == 200) {
         return response.data;
       } else {
+        print(response.statusCode);
         ErrorWidget('Erro ao buscar dados');
       }
       //print('Resposta da Api: ${response.data}');
     } on DioError catch (error) {
+      print(error);
       return ErrorWidget('Erro ao buscar dados: ${error.response?.data}');
       //return error.response?.data;
     }

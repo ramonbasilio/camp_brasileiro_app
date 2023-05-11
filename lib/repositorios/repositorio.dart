@@ -1,8 +1,8 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers, unused_local_variable, camel_case_types
 
 import 'package:camp_brasileiro_app/controladores/controlador_api.dart';
-import 'package:camp_brasileiro_app/modelos/rodada_modelo_completa.dart';
-import 'package:camp_brasileiro_app/modelos/tabela_modelo.dart';
+import 'package:camp_brasileiro_app/modelos/modelo_rodada_completa.dart';
+import 'package:camp_brasileiro_app/modelos/modelo_tabela.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';

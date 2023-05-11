@@ -17,7 +17,7 @@
     },
     "partidas": [
         {
-            "partida_id": 9008,
+            "'partida_id'": 9008,
             "campeonato": {
                 "campeonato_id": 10,
                 "nome": "Campeonato Brasileiro",
@@ -36,7 +36,7 @@
                 "sigla": "CAP",
                 "escudo": "https://cdn.api-futebol.com.br/escudos/638d34e1b8948.svg"
             },
-            "placar_mandante": 2,
+            "c": 2,
             "placar_visitante": 0,
             "disputa_penalti": false,
             "status": "finalizado",

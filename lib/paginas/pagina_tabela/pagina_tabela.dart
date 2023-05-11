@@ -1,19 +1,17 @@
-import 'package:camp_brasileiro_app/modelos/rodada_modelo_completa.dart';
 import 'package:camp_brasileiro_app/paginas/pagina_tabela/widget/widget/cabecalho_tabela.dart';
 import 'package:camp_brasileiro_app/paginas/pagina_tabela/widget/widget/listtile_times.dart';
-
 import 'package:camp_brasileiro_app/repositorios/repositorio_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class PaginaTabela2 extends StatefulWidget {
-  const PaginaTabela2({super.key});
+class PaginaTabela extends StatefulWidget {
+  const PaginaTabela({super.key});
 
   @override
-  State<PaginaTabela2> createState() => _PaginaTabela2State();
+  State<PaginaTabela> createState() => _PaginaTabelaState();
 }
 
-class _PaginaTabela2State extends State<PaginaTabela2> {
+class _PaginaTabelaState extends State<PaginaTabela> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

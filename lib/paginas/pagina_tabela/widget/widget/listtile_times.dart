@@ -1,11 +1,12 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:camp_brasileiro_app/modelos/rodada_modelo_completa.dart';
-import 'package:camp_brasileiro_app/modelos/rodada_modelo_time.dart';
-import 'package:camp_brasileiro_app/paginas/pagina_resumo/pagina_resumo_time.dart';
-import 'package:camp_brasileiro_app/modelos/tabela_modelo.dart';
+import 'package:camp_brasileiro_app/modelos/modelo_rodada_completa.dart';
+import 'package:camp_brasileiro_app/modelos/modelo_rodada_time.dart';
+import 'package:camp_brasileiro_app/paginas/pagina_resumo_time/pagina_resumo_time.dart';
+import 'package:camp_brasileiro_app/modelos/modelo_tabela.dart';
 import 'package:camp_brasileiro_app/repositorios/repositorio_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class LisTileTimes extends StatelessWidget {
   List<modeloTime> tabelaCompleta;
@@ -43,6 +44,7 @@ class LisTileTimes extends StatelessWidget {
       leading: SizedBox(
         width: 60,
         height: 60,
+      
         child: Center(
           child: Image(
             image: AssetImage(

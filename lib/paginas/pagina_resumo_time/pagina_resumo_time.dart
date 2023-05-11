@@ -1,9 +1,12 @@
 // ignore_for_file: must_be_immutable
-import 'package:camp_brasileiro_app/modelos/rodada_modelo_time.dart';
-import 'package:camp_brasileiro_app/paginas/agenda/pagina_agenda.dart';
-import 'package:camp_brasileiro_app/paginas/pagina_tabela/widget/widget/ultimos_jogos.dart';
-import 'package:camp_brasileiro_app/modelos/tabela_modelo.dart';
+import 'package:camp_brasileiro_app/modelos/modelo_rodada_time.dart';
+import 'package:camp_brasileiro_app/paginas/pagina_agenda/pagina_agenda.dart';
+import 'package:camp_brasileiro_app/paginas/pagina_agenda/pagina_agenda_1T.dart';
+import 'package:camp_brasileiro_app/paginas/pagina_agenda/pagina_agenda_2T.dart';
+import 'package:camp_brasileiro_app/paginas/pagina_resumo_time/widget/ultimos_jogos.dart';
+import 'package:camp_brasileiro_app/modelos/modelo_tabela.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'package:get/get.dart';
 
@@ -104,7 +107,6 @@ class _PaginaResumoTimeState extends State<PaginaResumoTime> {
                       child: Text('SALDO DE GOLS'),
                     ),
                   ),
-
                   ListTile(
                     title: Center(
                       child: Text(
@@ -136,15 +138,29 @@ class _PaginaResumoTimeState extends State<PaginaResumoTime> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => PaginaAgenda(
+                              builder: (context) => PaginaAgenda1Turno(
                                 rodadasTime: widget.rodadasTime,
                               ),
                             ));
                       },
-                      child: Text('Agenda do time'),
+                        child: const Text('Agenda - 1º Turno'),
                     ),
                   ),
-              
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //       builder: (context) => PaginaAgenda2Turno(
+                        //         rodadasTime: widget.rodadasTime,
+                        //       ),
+                        //     ));
+                      },
+                      child: const Text('Agenda - 2º Turno'),
+                    ),
+                  ),
                 ],
               ),
             )
