@@ -6,6 +6,8 @@ import 'package:camp_brasileiro_app/repositorios/repositorio_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../pagina_resumo_partida/pagina_navegacao.dart';
+
 class PaginaAgenda1Turno extends StatelessWidget {
   List<modeloRodadaTime> rodadasTime;
   PaginaAgenda1Turno({super.key, required this.rodadasTime});
@@ -48,7 +50,7 @@ class PaginaAgenda1Turno extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
                 child: GestureDetector(
                   onTap: () async {
-                    if (rodadasTime[index].status == 'encerrada') {
+                    if (rodadasTime[index].partidas['placar_mandante'] != null) {
                       int partidaId = rodadasTime[index].partidas['partida_id'];
                       Future<modeloResumoPartida> resumoPartidaFuturo =
                           repositorioProvider().resumoPartidaTime(partidaId);
@@ -70,11 +72,14 @@ class PaginaAgenda1Turno extends StatelessWidget {
                                       ),
                                     );
                                   } else if (snapshot.hasData) {
+
                                     modeloResumoPartida resumoPartida =
                                         snapshot.data as modeloResumoPartida;
-                                    return PaginaResumoPartida(
-                                      resumoPartida: resumoPartida,
-                                    );
+                                        return PaginaNavegacao(resumoPartida: resumoPartida);
+                                    // return PaginaResumoPartida(
+                                    //   resumoPartida: resumoPartida,
+                                    // );
+
                                   } else if (snapshot.hasError) {
                                     return Scaffold(
                                       appBar: AppBar(
